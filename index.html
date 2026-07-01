@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIT.TRACK</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <link rel="stylesheet" href="peaktrack_completo.css">
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar"> 
+
+      <div class="logo">
+        FIT<span>.</span>TRACK
+      </div>
+
+      <nav class="nav">
+
+        <button class="nav-item active" data-screen="dashboard">
+          <i class="ti ti-layout-dashboard"></i>
+          Dashboard
+        </button>
+
+        <button class="nav-item" data-screen="treinos">
+          <i class="ti ti-barbell"></i>
+          Treinos
+        </button>
+
+        <button class="nav-item" data-screen="historico">
+          <i class="ti ti-history"></i>
+          Histórico
+        </button>
+
+        <button class="nav-item" data-screen="estatisticas">
+          <i class="ti ti-chart-bar"></i>
+          Estatísticas
+        </button>
+
+
+      </nav>
+
+    </aside>
+
+    <main class="main">
+
+      <header class="topbar">
+        <h1 id="screen-title">
+          Dashboard
+        </h1>
+      </header>
+
+      <!-- DASHBOARD -->
+
+      <section class="screen active" id="dashboard">
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <span class="stat-number" id="totalWorkouts">0</span>
+            <span class="stat-label">Treinos</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number" id="totalVolume">0</span>
+            <span class="stat-label">Volume (kg)</span>
+          </div>
+
+          <div class="stat-card">
+            <span class="stat-number" id="weeklyWorkouts">0</span>
+            <span class="stat-label">Semana</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- TREINOS -->
+
+      <section class="screen" id="treinos">
+
+        <div class="section-top">
+
+          <h2>Treinos cadastrados</h2>
+
+          <button id="btnNewWorkout" class="btn-primary">
+            <i class="ti ti-plus"></i>
+            Novo treino
+          </button>
+
+        </div>
+
+        <div id="workoutList"></div>
+
+      </section>
+
+      <section class="screen" id="treinoAberto"></section>
+
+      <!-- HISTÓRICO -->
+
+      <section class="screen" id="historico">
+
+        <h2>Histórico</h2>
+
+        <div id="historyList"></div>
+
+      </section>
+
+      <!-- ESTATÍSTICAS -->
+
+      <section class="screen" id="estatisticas">
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <span class="stat-number" id="bestVolume">0</span>
+            <span class="stat-label">Maior Volume</span>
+        </div>
+
+        <div class="stat-card">
+            <span class="stat-number" id="bestCarga">0</span>
+            <span class="stat-label">Maior Carga</span>
+        </div>
+
+        <div class="stat-card">
+            <span class="stat-number" id="bestWorkout">0</span>
+            <span class="stat-label">Treinos Realizados</span>
+        </div>
+
+        <div class="stat-card">
+            <span class="stat-number" id="totalTime">0</span>
+            <span class="stat-label">Tempo Total</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+  </div>
+
+  <script src="peaktrack_completo.js"></script>
+
+</body>
+
+</html>
+```
